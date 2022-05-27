@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>map.txt</file>
+        <file>tower.png</file>
+        <file>tower2.png</file>
+        <file>bullet.png</file>
+        <file>nuts.png</file>
+        <file>pig.png</file>
+        <file>bird.png</file>
+    </qresource>
+</RCC>
