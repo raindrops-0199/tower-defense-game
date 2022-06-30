@@ -7,5 +7,7 @@
         <file>nuts.png</file>
         <file>pig.png</file>
         <file>bird.png</file>
+        <file>tower4.png</file>
+        <file>tower5.png</file>
     </qresource>
 </RCC>

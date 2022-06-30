@@ -18,16 +18,6 @@ int main(int argc, char *argv[])
     Map *map = new Map(QString(":/map.txt"));
     //Map *map = new Map();
 
-//    ofstream out("D:/OneDrive/undergraduate/curriculum/advanced-programming/project2/code/TowerDefense/resource/map.txt");
-//    if (!out){
-//        cout << "wrong";
-//    }
-//    for (int i = 0; i < 10; i++){
-//        for (int j = 0; j < 10; j++){
-//            out << i << ',' << j << ',' << map->map[i][j] << ';';
-//        }
-//    }
-
     game = new Game(map);
     game->show();
     return a.exec();

@@ -60,3 +60,35 @@ void BuildTower3Icon::mousePressEvent(QGraphicsSceneMouseEvent *event)
         game->setCursor(QString(":/tower2.png"));
     }
 }
+
+//---------------------------------tower4-------------------------
+
+BuildTower4Icon::BuildTower4Icon(QGraphicsItem *parent)
+{
+    setPixmap(QPixmap(":/tower4.png"));
+}
+
+void BuildTower4Icon::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    if (!game->building){
+        game->building = new Tower4();
+        game->setCursor(QString(":/tower4.png"));
+    }
+}
+
+
+//---------------------------------tower4-------------------------
+
+
+BuildTower5Icon::BuildTower5Icon(QGraphicsItem *parent)
+{
+    setPixmap(QPixmap(":/tower5.png"));
+}
+
+void BuildTower5Icon::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    if (!game->building){
+        game->building = new Tower5();
+        game->setCursor(QString(":/tower5.png"));
+    }
+}

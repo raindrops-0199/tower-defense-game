@@ -66,14 +66,21 @@ Game::Game(Map *map):map(map)
     BuildTower1Icon * ic1 = new BuildTower1Icon();
     BuildTower2Icon * ic2 = new BuildTower2Icon();
     BuildTower3Icon * ic3 = new BuildTower3Icon();
+    BuildTower4Icon * ic4 = new BuildTower4Icon();
+    BuildTower5Icon * ic5 = new BuildTower5Icon();
+
 
     ic1->setPos(x(), y() + 10);
     ic2->setPos(x(), y() + 60);
     ic3->setPos(x(), y() + 110);
+    ic4->setPos(x(), y() + 160);
+    ic5->setPos(x(), y() + 210);
 
     scene->addItem(ic1);
     scene->addItem(ic2);
     scene->addItem(ic3);
+    scene->addItem(ic4);
+    scene->addItem(ic5);
 
     //spawn enemies
     QTimer *timer = new QTimer();
@@ -132,12 +139,14 @@ void Game::mousePressEvent(QMouseEvent *event){
         int x, y;
         x = (event->y() - 50) / 50;
         y = (event->x() - 100) / 50;
-        qDebug() << x << " " << y;
+        //qDebug() << x << " " << y;
 
         if (map->map[x][y] == 0 ||
             (map->map[x][y] == 1 && dynamic_cast<Tower1*>(building)) ||
+            (map->map[x][y] == 1 && dynamic_cast<Tower5*>(building)) ||
             (map->map[x][y] == 2 && dynamic_cast<Tower2*>(building)) ||
-            (map->map[x][y] == 2 && dynamic_cast<Tower3*>(building))){
+            (map->map[x][y] == 2 && dynamic_cast<Tower3*>(building)) ||
+            (map->map[x][y] == 2 && dynamic_cast<Tower4*>(building))){
             return;
         }
 
